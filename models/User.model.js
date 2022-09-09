@@ -8,6 +8,7 @@ const userSchema = new Schema(
       // unique: true -> Ideally, should be unique, but its up to you
     },
     password: String,
+    avatar: { type: String }
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
@@ -15,6 +16,6 @@ const userSchema = new Schema(
   }
 );
 
-const User = model("User", userSchema);
+const UserModel = model("User", userSchema);
 
-module.exports = User;
+module.exports = UserModel;
